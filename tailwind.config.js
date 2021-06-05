@@ -7,15 +7,13 @@ module.exports = {
       fontFamily: {
         Bebas: ['Bebas Neue']
       },
+       zIndex: {
+       '-10': '-10',
+      }
     },
     gridTemplateColumns: {
      'cards': 'repeat(auto-fit, minmax(290px, 1fr))',
      'whyus': 'repeat(auto-fit, minmax(250px, 1fr))',
-    },
-    extend: {
-      zIndex: {
-       '-10': '-10',
-      }
     },
   },
   variants: {
