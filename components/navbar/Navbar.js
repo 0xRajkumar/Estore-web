@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import { FaShoppingCart } from 'react-icons/fa'
@@ -63,7 +63,7 @@ function Navbar() {
         <div className=" hidden md:flex flex-row  items-center">
           <AiOutlineHeart className="mx-4 text-4xl rounded-3xl p-1 border-gray-300 border cursor-pointer" />
           <MdAddShoppingCart className="mx-4 text-4xl rounded-3xl p-1 border-gray-300 border cursor-pointer" />
-          <Link href="/"><a><button className="py-2 px-5 mx-4 text-white bg-blue-500 hover:bg-blue-600 rounded-3xl transition outline-none  duration-300 ease-in-out focus:outline-none">Login</button></a></Link>
+          <Link href="/login"><a><button className="py-2 px-5 mx-4 text-white bg-blue-500 hover:bg-blue-600 rounded-3xl transition outline-none  duration-300 ease-in-out focus:outline-none">Login</button></a></Link>
         </div>
         <div className="absolute right-4 text-3xl md:hidden">
           <Burger_crose />

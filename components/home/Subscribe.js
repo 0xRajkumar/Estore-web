@@ -11,7 +11,7 @@ export default function Subscribe() {
                         </div>
                         <div className=" my-4 width">
                             <div className="flex relative ">
-                                <input type="text" className=" py-2 px-10  rounded-full outline-none w-full" placeholder="Write Your email" />
+                                <input type="text" className=" py-2 px-6 rounded-full outline-none w-full" placeholder="Write Your email" />
                                 <button className="bg-blue-500 text-white rounded-full py-2 px-5 absolute right-0 outline-none">Button</button>
                             </div>
                         </div>

@@ -1,0 +1,10 @@
+import Signup from '../components/Signup'
+
+export default function SignupC() {
+    return (
+        <>
+
+            <Signup />
+        </>
+    )
+}
