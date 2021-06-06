@@ -55,8 +55,7 @@ function Navbar() {
         <ul className="hidden md:flex flex-row items-center mr-4  ">
           <li className="px-4"><Link href="/"><a className=" hover:text-red-600 transition  duration-500 ease-in-out">Home</a></Link></li>
           <li className="px-4"><Link href="/#latestitem"><a className=" hover:text-red-600 transition  duration-500 ease-in-out">Latest</a></Link></li>
-          <li className="px-4"><Link href="/"><a className=" hover:text-red-600 transition  duration-500 ease-in-out">Shop</a></Link></li>
-          <li className="px-4"><Link href="/"><a className=" hover:text-red-600 transition  duration-500 ease-in-out">Blogs</a></Link></li>
+          <li className="px-4"><Link href="/shop"><a className=" hover:text-red-600 transition  duration-500 ease-in-out">Shop</a></Link></li>
           <li className="px-4"><Link href="/"><a className=" hover:text-red-600 transition  duration-500 ease-in-out">Contact</a></Link></li>
         </ul>
 
