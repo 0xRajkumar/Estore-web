@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { auth } from '../firebase'
 import { useRouter } from 'next/router'
+import { ToastContainer, toast } from 'react-toastify';
 export default function Signup() {
     const router = useRouter()
     const [name, setname] = useState("")
@@ -9,19 +10,48 @@ export default function Signup() {
     const [password, setpassword] = useState("")
 
     async function handleSubmit() {
-        try {
-            const res = await auth.createUserWithEmailAndPassword(email, password)
-            console.log(res)
-            await res.user.updateProfile({
-                displayName: name
-            })
-            alert("signup done")
-            setname("")
-            setemail("")
-            setpassword("")
-            router.push("/")
-        } catch (error) {
-            alert(error.message)
+        if (!name || !email || !passowrd) {
+            toast.error('Please fill all detail carefully', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        } else {
+
+            try {
+                const res = await auth.createUserWithEmailAndPassword(email, password)
+
+                await res.user.updateProfile({
+                    displayName: name
+                })
+                toast.success('Signup successfully', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+                setname("")
+                setemail("")
+                setpassword("")
+                router.push("/")
+            } catch (error) {
+                toast.error('Please fill all detail carefully', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
         }
 
 
@@ -53,6 +83,17 @@ export default function Signup() {
                     </div>
                 </div>
             </section>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </>
     )
 }

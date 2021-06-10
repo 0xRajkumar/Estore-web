@@ -3,6 +3,7 @@ import Item from './Item'
 
 
 export default function LatestItems({ data }) {
+    
 
     return (
         <>

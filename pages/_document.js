@@ -9,7 +9,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <meta
+            name="description"
+            content="This website is ceated by Rajkumar its ecommerce website"/>
+        </Head>
         <body>
           <Main />
           <NextScript />
