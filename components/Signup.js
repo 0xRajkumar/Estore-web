@@ -10,7 +10,7 @@ export default function Signup() {
     const [password, setpassword] = useState("")
 
     async function handleSubmit() {
-        if (!name || !email || !passowrd) {
+        if (!name || !email || !password) {
             toast.error('Please fill all detail carefully', {
                 position: "top-center",
                 autoClose: 5000,
@@ -28,6 +28,9 @@ export default function Signup() {
                 await res.user.updateProfile({
                     displayName: name
                 })
+                setname("")
+                setemail("")
+                setpassword("")
                 toast.success('Signup successfully', {
                     position: "top-center",
                     autoClose: 5000,
@@ -37,10 +40,8 @@ export default function Signup() {
                     draggable: true,
                     progress: undefined,
                 });
-                setname("")
-                setemail("")
-                setpassword("")
                 router.push("/")
+                // auth.signOut()
             } catch (error) {
                 toast.error('Please fill all detail carefully', {
                     position: "top-center",
@@ -78,8 +79,8 @@ export default function Signup() {
                             <label htmlFor="password" className="my-2 text-gray-600">password</label>
                             <input value={password} onChange={(e) => { setpassword(e.target.value) }} name="password" type="text" className=" py-2 border focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded px-3" />
                         </div>
-                        <button onClick={handleSubmit} className="w-full my-5 bg-blue-400 rounded  py-2 px-6 text-white hover:bg-blue-600">Submit</button>
-                        <h1 className="text-center text-blue-600 hover:underline" ><Link href="/login"><a>Don't Login, signup now</a></Link></h1>
+                        <button onClick={handleSubmit} className="w-full my-5 focus:outline-none bg-blue-400 rounded  py-2 px-6 text-white hover:bg-blue-600">Submit</button>
+                        <h1 className="text-center text-blue-600 hover:underline" ><Link href="/login"><a>Login now</a></Link></h1>
                     </div>
                 </div>
             </section>

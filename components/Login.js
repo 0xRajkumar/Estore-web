@@ -64,7 +64,7 @@ export default function Signup() {
                             <label htmlFor="email" className="my-2 text-gray-600">Password</label>
                             <input value={password} onChange={(e) => { setpassword(e.target.value) }} name="password" type="text" className=" py-2 border focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded px-3" />
                         </div>
-                        <button onClick={handleSubmit} className="w-full my-5 bg-blue-400 rounded  py-2 px-6 text-white hover:bg-blue-600">Submit</button>
+                        <button onClick={handleSubmit} className="focus:outline-none w-full my-5 bg-blue-400 rounded  py-2 px-6 text-white hover:bg-blue-600">Submit</button>
                         <h1 className="text-center text-blue-600 hover:underline" ><Link href="/signup"><a>Don't signup, signup now</a></Link></h1>
                     </div>
                 </div>
