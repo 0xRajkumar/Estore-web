@@ -8,7 +8,7 @@ export default function LatestItems({ data }) {
     return (
         <>
 
-            <section className="p-4 max-w-screen-2xl m-auto" id="latestitem">
+            <section className=" max-w-screen-2xl m-auto" id="latestitem">
                 <div className="my-20">
                     <h1 className="text-center text-4xl sm:text-5xl md:text-7xl font-Bebas antialiased underline ">Latest Products</h1>
                 </div>

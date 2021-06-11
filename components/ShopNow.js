@@ -95,7 +95,7 @@ export default function ShopNow({ data, user }) {
                 <div onClick={handleplaceorderwhenon} >
 
                     <h1 className="text-gray-800  font-bold text-center text-6xl  tracking-wider underline my-10 font-Bebas">SHOP NOW</h1>
-                    <div onClick={handleplaceorderwhenon} className="max-w-screen-xl w-5/6 mx-auto py-5">
+                    <div onClick={handleplaceorderwhenon} className="max-w-screen-xl sm:w-5/6 mx-auto py-5">
                         <div className="flex flex-row flex-wrap">
                             <div className="w-2/6 min-w-400 m-auto">
                                 <Image src={data.image} width="900" height="1000" />
@@ -109,7 +109,7 @@ export default function ShopNow({ data, user }) {
                                     <div className="flex items-center  my-10">
                                         <h1 className="font-semibold text-xl">Qty: <br /></h1>
                                         {/* <AiOutlineMinus onClick={() => { if (price >= 1 && placeOrder !== true) { setprice(price - 1) } }} className="mx-2 text-gray-600 border rounded  bg-gray-200 shadow-xl p-1 active:shadow-none cursor-pointer text-3xl  ease-in-out focus:outline-none " /> */}
-                                        <input type="text" value={price} onChange={(e) => { setprice(e.target.value) }} className="mx-2 rounded py-1 w-12 shadow-inner transition-all duration-300 ease-in-out focus:outline-none focus:border-gray-900 bg-gray-100  outline-none " />
+                                        <input type="number" value={price} onChange={(e) => { setprice(e.target.value) }} className="mx-2 rounded py-1 w-12 shadow-inner transition-all duration-300 ease-in-out focus:outline-none focus:border-gray-900 bg-gray-100  outline-none " />
                                         {/* <AiOutlinePlus onClick={() => { setprice(price + 1) }} className="mx-2 text-gray-600 border rounded  bg-gray-200 shadow-xl p-1 active:shadow-none cursor-pointer text-3xl  ease-in-out focus:outline-none " /> */}
                                     </div>
                                     <h1 className="text-2xl font-semibold">Total Price : ${data.price * price}</h1>
@@ -136,7 +136,7 @@ export default function ShopNow({ data, user }) {
                         </div>
                         <div className="w-full flex flex-col my-px ">
                             <label htmlFor="name" className="my-2 text-gray-600">Postal Code</label>
-                            <input value={code} onChange={(e) => { setcode(e.target.value) }} name="name" type="text" className=" py-2 border border-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded px-3" />
+                            <input value={code} onChange={(e) => { setcode(e.target.value) }} name="name" type="number" className=" py-2 border border-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded px-3" />
                         </div>
                         <div className="w-full flex flex-col my-px ">
                             <label htmlFor="name" className="my-2 text-gray-600">Country</label>
@@ -147,9 +147,7 @@ export default function ShopNow({ data, user }) {
                             <h1>${data.price * price}</h1>
                             {/* <input value={data.price * price} type="text" readOnly className=" py-2   focus:outline-none   rounded px-3" /> */}
                         </div><button onClick={handleinputs} className="w-full my-1 bg-blue-400 rounded  py-2 px-6 text-white hover:bg-blue-600">Submit</button>
-
                     </div>
-
                 </div>
             </section>
             <ToastContainer
