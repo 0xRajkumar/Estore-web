@@ -66,7 +66,7 @@ export default function Item({ image, title, price, id }) {
             <div className="group w-72 shadow-2xl hover:shadow  border border-gray-300 ">
                 <div className="relative ">
                     <Image src={image} height="1100" width="1000" alt="product" />
-                    <button className="py-2 px-4 outline-none  focus:outline-none rounded-full border border-gray-400  absolute left-0 right-0 m-auto -bottom-12 bg-white text-gray-900 hover:bg-gray-900  hover:text-white transition-all duration-500  group-hover:bottom-5  "><Link href="/shop/[id]" as={"/shop/" + id}><a>Purchase</a></Link></button>
+                    <button className="py-2 px-4 h-12 w-28 outline-none  focus:outline-none rounded-full border border-gray-400  absolute left-0 right-0 m-auto -bottom-12 bg-white text-gray-900 hover:bg-gray-900  hover:text-white transition-all duration-500  group-hover:bottom-5   "><Link href="/shop/[id]" as={"/shop/" + id}><a>Purchase</a></Link></button>
                 </div>
                 <div className="p-3 relative bg-white">
 

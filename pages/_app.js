@@ -28,10 +28,9 @@ function MyApp({ Component, pageProps }) {
   }, [])
   useEffect(() => {
     const wishdata = localStorage.setItem("wish", JSON.stringify(wish))
-
-   
   }, [wish])
 
+  
   return (
     <>
       <wishContext.Provider value={{ wish, setwish }}>
